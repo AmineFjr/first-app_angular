@@ -5,7 +5,7 @@ import {HousingLocation} from '../housinglocation';
 @Component({
   selector: 'app-housing-location',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   template: `
     <section class="listing">
       <img
@@ -18,9 +18,8 @@ import {HousingLocation} from '../housinglocation';
       <p class="listing-location">{{ housingLocation.city }}, {{ housingLocation.state }}</p>
     </section>
   `,
-  styles: ``
+  styleUrls: ['./housing-location.component.css'],
 })
-
 export class HousingLocationComponent {
   @Input() housingLocation!: HousingLocation;
 }
